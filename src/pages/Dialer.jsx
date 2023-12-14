@@ -87,6 +87,7 @@ const Dialer = () => {
             <Box>
                 <Button
                     variant='contained'
+                    color='success'
                     sx={{ height: 70, width: 70, borderRadius: '50%', bgcolor: 'green' }}
                     onClick={dialer.length && handleCall}
                 >

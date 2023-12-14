@@ -113,7 +113,7 @@ const CallingScreen = () => {
                 </UtilityButton>
             </ButtonGrid>
 
-            <UtilityButton onClick={() => navigate('/')} sx={{ bgcolor: 'maroon' }}>
+            <UtilityButton onClick={() => navigate('/')} color='error' sx={{ bgcolor: 'maroon' }}>
                 <CallEndRoundedIcon fontSize='large' />
             </UtilityButton>
         </Container>
