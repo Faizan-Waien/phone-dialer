@@ -48,11 +48,9 @@ function a11yProps(index) {
 
 const Container = styled(Box)(() => ({
     flexGrow: 1,
-    backgroundColor: 'black',
     display: 'flex',
     flexDirection: 'column',
-    height: '100vh',
-    width: 430,
+    width: '100%',
     // justifyContent: 'space-between',
     justifyContent: 'start',
     alignItems: 'center',
@@ -75,8 +73,6 @@ export default function AppLayout() {
 
     return (
         <Container>
-            <Topbar />
-
             <Zoom in={value === 0} component={FullWidthDiv} mountOnEnter unmountOnExit>
                 <FullWidthDiv>
                     <TabPanel value={value} index={0}>

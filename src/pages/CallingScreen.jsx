@@ -12,14 +12,12 @@ import { Box, Button, Stack, Typography, styled } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 const Container = styled(Box)(() => ({
-    background: 'black',
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
     gap: 100,
     alignItems: 'center',
-    borderRadius: '20px',
-    marginBottom: '10px'
+    marginTop: 60
 }))
 
 const ButtonGrid = styled(Box)(() => ({
@@ -33,8 +31,8 @@ const UtilityButton = styled(({ children, ...props }) =>
     <Button variant='contained' {...props}>
         {children}
     </Button>)(() => ({
-        height: 80,
-        width: 80,
+        height: 70,
+        width: 70,
         borderRadius: '50%',
         backgroundColor: 'grey'
     }))
@@ -81,7 +79,6 @@ const CallingScreen = () => {
     return (
 
         <Container>
-            <Topbar />
 
             <Box textAlign='center'>
                 <Typography variant='h3' color={'white'}>{dialer}</Typography>

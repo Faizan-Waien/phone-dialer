@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux"
 import { dial } from "../Store/Slice/dialerSlice"
 
 const StyledButton = styled(Button)(() => ({
-    height: 80,
-    width: 80,
+    height: 70,
+    width: 70,
     borderRadius: '50%',
     backgroundColor: '#242424',
     fontSize: '40px'

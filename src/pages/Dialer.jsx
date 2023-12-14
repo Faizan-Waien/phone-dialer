@@ -13,7 +13,7 @@ const Container = styled(Box)(() => ({
     flexDirection: 'column',
     gap: 30,
     alignItems: 'center',
-    margin: '50px auto'
+    margin: '0px auto'
 }))
 
 const ButtonGrid = styled(Box)(() => ({
@@ -87,7 +87,7 @@ const Dialer = () => {
             <Box>
                 <Button
                     variant='contained'
-                    sx={{ height: 80, width: 80, borderRadius: '50%', bgcolor: 'green' }}
+                    sx={{ height: 70, width: 70, borderRadius: '50%', bgcolor: 'green' }}
                     onClick={dialer.length && handleCall}
                 >
                     <CallIcon fontSize='large' />
