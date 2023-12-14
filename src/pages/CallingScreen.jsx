@@ -57,24 +57,22 @@ const CallingScreen = () => {
 
     useEffect(() => {
         let interval;
-        if (callConnect) {
-            interval = setInterval(() => {
-                setTime((prevTime) => prevTime + 1000);
-            }, 1000);
-        }
-        return () => clearInterval(interval);
-    }, [callConnect]);
-
-    useEffect(() => {
         let timeout
         if (callConnect) {
+            interval = setInterval(() => {
+                console.log('interval')
+                setTime((prevTime) => prevTime + 1000);
+            }, 1000);
+
             timeout = setTimeout(() => {
                 navigate('/?tab=2')
             }, 11000)
         }
-
-        return () => clearTimeout(timeout)
-    }, [callConnect])
+        return () => {
+            clearInterval(interval);
+            clearTimeout(timeout)
+        }
+    }, [callConnect]);
 
     return (
 

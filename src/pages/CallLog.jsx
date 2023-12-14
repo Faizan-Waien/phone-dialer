@@ -9,7 +9,6 @@ const Container = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     background: 'black',
-    // height: '770px',
     padding: '20px 0px'
 }))
 
@@ -43,19 +42,21 @@ const CallLog = () => {
     return (
         <Container>
             <Typography variant='h4'>Call Log</Typography>
-            {record.map((item) => {
-                return (
-                    <TransitionGroup>
-                        <Collapse key={item.id}>
-                            <LogItem>
-                                <Typography variant='h6'>{item.number}</Typography>
-                                <Typography variant='body1' sx={{ marginLeft: 'auto' }}>{parseTime(item.time)}</Typography>
-                                <IconButton onClick={() => handleDelete(item.id)}><DeleteOutline color='error' /></IconButton>
-                            </LogItem>
-                        </Collapse>
-                    </TransitionGroup>
-                )
-            })}
+            <Box height={500} overflow={'auto'}>
+                {record.map((item) => {
+                    return (
+                        <TransitionGroup>
+                            <Collapse key={item.id}>
+                                <LogItem>
+                                    <Typography variant='h6'>{item.number}</Typography>
+                                    <Typography variant='body1' sx={{ marginLeft: 'auto' }}>{parseTime(item.time)}</Typography>
+                                    <IconButton onClick={() => handleDelete(item.id)}><DeleteOutline color='error' /></IconButton>
+                                </LogItem>
+                            </Collapse>
+                        </TransitionGroup>
+                    )
+                })}
+            </Box>
         </Container>
     )
 }
