@@ -33,19 +33,6 @@ function TabPanel(props) {
     );
 }
 
-TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
-    return {
-        id: `vertical-tab-${index}`,
-        'aria-controls': `vertical-tabpanel-${index}`,
-    };
-}
-
 const Container = styled(Box)(() => ({
     flexGrow: 1,
     display: 'flex',
@@ -99,15 +86,14 @@ export default function AppLayout() {
 
             <Tabs
                 orientation="horizontal"
-                variant="scrollable"
                 value={value}
                 onChange={handleChange}
                 aria-label="tabs"
                 sx={{ borderRight: 1, borderColor: 'divider', bgcolor: 'transparent', marginTop: 'auto' }}
             >
-                <Tab icon={<DialpadRoundedIcon fontSize='large' htmlColor='white' />}{...a11yProps(1)} />
-                <Tab icon={<HomeRoundedIcon fontSize='large' htmlColor='white' />}{...a11yProps(0)} />
-                <Tab icon={<PhoneIcon fontSize='large' htmlColor='white' />}{...a11yProps(2)} />
+                <Tab icon={<DialpadRoundedIcon fontSize='large' htmlColor='white' />} />
+                <Tab icon={<HomeRoundedIcon fontSize='large' htmlColor='white' />} />
+                <Tab icon={<PhoneIcon fontSize='large' htmlColor='white' />} />
             </Tabs>
         </Container>
     );

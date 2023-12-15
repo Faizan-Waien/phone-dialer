@@ -79,7 +79,7 @@ const CallingScreen = () => {
         <Container>
 
             <Box textAlign='center'>
-                <Typography variant='h3' color={'white'}>{dialer}</Typography>
+                <Typography variant='h3' color='white'>{dialer}</Typography>
                 <Typography variant='body1'>{callConnect ? 'Call Connected' : 'Connecting...'}</Typography>
 
                 <Stack direction={'row'} justifyContent={'center'}>
