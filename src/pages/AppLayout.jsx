@@ -14,16 +14,10 @@ import { Fade, Grow, Slide, Zoom, styled } from '@mui/material';
 import { useSearchParams } from 'react-router-dom';
 
 function TabPanel(props) {
-    const { children, value, index, ...other } = props;
+    const { children, value, index, ...others } = props;
 
     return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`vertical-tabpanel-${index}`}
-            aria-labelledby={`vertical-tab-${index}`}
-            {...other}
-        >
+        <div {...others}>
             {value === index && (
                 <Box sx={{ p: 3 }}>
                     {children}
